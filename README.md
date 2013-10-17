@@ -3,4 +3,4 @@ scripts
 
 Update with:
 
-**git remote update**
+**git update**
