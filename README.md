@@ -3,4 +3,4 @@ scripts
 
 Update with:
 
-**git update**
+**git pull**
