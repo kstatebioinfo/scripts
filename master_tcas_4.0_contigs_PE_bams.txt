@@ -1,2 +1,2 @@
-tca_ref_chrLG_all_to_Kmer_merges_81-scaffolds/tca_ref_chrLG_all_3kb_unambig_sorted.bam
+./Alignments/tcas_4.0_scaffolds/tcas_4.0_scaff_3kb.bwa.sorted.bam
 2400 2600
