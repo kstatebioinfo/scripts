@@ -25,8 +25,8 @@ while (<MASSES>)
     $my_try{$value}="$value ";
 }
 %my_original=%my_try;
-my $goal_mass=1024;
-# my $goal_mass=600;
+# my $goal_mass=1024;
+my $goal_mass=303;
 
 ############### add values ####################
 sub my_add
