@@ -25,8 +25,8 @@ while (<MASSES>)
     $my_try{$value}="$value ";
 }
 %my_original=%my_try;
-# my $goal_mass=1024;
-my $goal_mass=303;
+my $goal_mass=1024;
+# my $goal_mass=303;
 
 ############### add values ####################
 sub my_add
@@ -58,6 +58,7 @@ sub possible
             my $key_o=join ' ',@olds_array_sorted;
             #            $ref->{'username'}
             my %combination;
+            my $count;
             if ($sub_sorted_hash->{$key_o})
             {
                 $sub_sorted_hash->{$key_n}=($sub_sorted_hash->{$key_o})+$aa_mass;
@@ -72,10 +73,12 @@ sub possible
                         );
                         while(my @combo = $combinat->next_combination)
                         {
-                            $combination{$combinat}=1;
+                            # $combination{$combinat}=1;
+                            ++$count;
                         }
                         
-                        $sub_answer+= scalar(keys %combination);
+                        # $sub_answer+= scalar(keys %combination);
+                        $sub_answer+= $count;
                     }
                     elsif ($sub_sorted_hash->{$key_n}<$goal_mass)
                     {
@@ -99,10 +102,12 @@ sub possible
                         );
                         while(my @combo = $combinat->next_combination)
                         {
-                            $combination{$combinat}=1;
+                            # $combination{$combinat}=1;
+                            ++$count;
                         }
                         
-                        $sub_answer+= scalar(keys %combination);
+                        # $sub_answer+= scalar(keys %combination);
+                        $sub_answer+= $count;
                     }
                     elsif ($sub_sorted_hash->{$key_n}<$goal_mass)
                     {
