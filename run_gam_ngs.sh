@@ -14,7 +14,7 @@ GAM_MERGE=../../gam-ngs/bin/gam-merge
 #  Created by jennifer shelton on 11/13/13.
 
 cd ~/tca_ref_chrLG_all_to_Kmer_merges_81-scaffolds
-mkdir -p ./gam-ngs_merge22
+mkdir -p ./gam-ngs_merge2
 echo -e "\n### GAM-NGS's blocks construction\n"
 echo -e "gam-create --master-bam ${SCRIPT_PATH}/gam-ngs_merge2/Allpaths-LG.PE.list.txt --slave-bam ${SCRIPT_PATH}/gam-ngs_merge2/MSR-CA.PE.list.txt --min-block-size 10 --output ${SCRIPT_PATH}/gam-ngs_merge2/out >${SCRIPT_PATH}/gam-create.log.out 2>${SCRIPT_PATH}/gam-create.log.err\n"
 
