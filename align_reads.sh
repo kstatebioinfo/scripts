@@ -8,6 +8,7 @@ reference=$3
 #   
 #	USAGE: bash align_reads.sh [read 1] [read 2] [reference]
 #
+# bash /home/sheltonj/scripts/align_reads.sh /home/sheltonj/tca_ref_chrLG_all_to_Kmer_merges_81-scaffolds/reads/Tribolium3kb_1_prinseq_good_P7uO.fastq /home/sheltonj/tca_ref_chrLG_all_to_Kmer_merges_81-scaffolds/reads/Tribolium3kb_2_prinseq_good_36G8.fastq /home/sheltonj/tca_ref_chrLG_all_to_Kmer_merges_81-scaffolds/tcas.scaffolds.fasta
 #  Created by jennifer shelton
 #
 ##################################################################################
