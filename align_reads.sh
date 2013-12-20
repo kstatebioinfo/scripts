@@ -77,7 +77,7 @@ fi
 #####################################################
 ################# align reads to ref ################
 #####################################################
-cd ${ref_dir}
+cd ${dir_1}
 
 # ~/bwa/bwa index ${reference}
 ~/bwa/bwa aln -o 0 -t 4 ${reference} ${filename_1} > "${ref_dir}Alignments/${ref_base}/${base_1}.sai" 
