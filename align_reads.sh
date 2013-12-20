@@ -32,15 +32,15 @@ reference=$3
 ##################################################################################
 
 filename_1="${1##*/}"                      # Strip longest match of */ from start
-dir_1="${1:0:${#1} - ${#filename}}" # Substring from 0 thru pos of filename
-base_1="${filename%.[^.]*}"                       # Strip shortest match of . plus at least one non-dot char from end
-ext_1="${filename:${#base} + 1}"                  # Substring from len of base thru end
-if [[ -z "$base" && -n "$ext" ]]; then          # If we have an extension and no base, it's really the base
-base_1=".$ext"
+dir_1="${1:0:${#1} - ${#filename_1}}" # Substring from 0 thru pos of filename
+base_1="${filename_1%.[^.]*}"                       # Strip shortest match of . plus at least one non-dot char from end
+ext_1="${filename_1:${#base_1} + 1}"                  # Substring from len of base thru end
+if [[ -z "$base_1" && -n "$ext_1" ]]; then          # If we have an extension and no base, it's really the base
+base_1=".$ext_1"
 ext_1=""
 fi
-echo "${filename}";
-echo "${dir}";
+echo "${filename_1}";
+echo "${dir_1}";
 
 filename_2="${2##*/}"                      # Strip longest match of */ from start
 dir_2="${2:0:${#2} - ${#filename_2}}" # Substring from 0 thru pos of filename
@@ -50,8 +50,8 @@ if [[ -z "$base_2" && -n "$ext_2" ]]; then          # If we have an extension an
 base_1=".$ext_2"
 ext_1=""
 fi
-echo "${filename}";
-echo "${dir}";
+echo "${filename_2}";
+echo "${dir_2}";
 
 ##################################################################################
 ##############            get path to reference                 ##################
@@ -79,7 +79,7 @@ fi
 #####################################################
 cd ${dir}
 
-~/bwa/bwa index ${reference}
+# ~/bwa/bwa index ${reference}
 ~/bwa/bwa aln -o 0 -t 4 ${reference} ${filename_1} > "${dir}Alignments/${ref_base}/${base_1}.sai" 
 
 ~/bwa/bwa aln -o 0 -t 4 ${reference} ${filename_2} > "${dir}Alignments/${ref_base}/${base_2}.sai"
