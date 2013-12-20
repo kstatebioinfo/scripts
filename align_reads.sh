@@ -121,7 +121,6 @@ cd ${dir_1}
 # ~/bwa/bwa aln -o 0 -t 4 ./tcas.scaffolds.fasta ./Tribolium3kb_2_prinseq_good_36G8.fastq > ./Alignments2/tcas_4.0_scaffolds/Tribolium3kb_2_prinseq_good_36G8.sai
 
 # ~/bwa/bwa sampe ./tcas.scaffolds.fasta ./Alignments2/tcas_4.0_scaffolds/Tribolium3kb_1_prinseq_good_P7uO.sai ./Alignments2/tcas_4.0_scaffolds/Tribolium3kb_2_prinseq_good_36G8.sai ./Tribolium3kb_1_prinseq_good_P7uO.fastq ./Tribolium3kb_2_prinseq_good_36G8.fastq | samtools view -Shu -@ 4 - | samtools sort -@ 4 - ./Alignments2/tcas_4.0_scaffolds/tcas_4.0_scaff_3kb.bwa.sorted
-/home/sheltonj/bwa/bwa sampe /home/sheltonj/tca_ref_chrLG_all_to_Kmer_merges_81-scaffolds/tcas.scaffolds.fasta /home/sheltonj/tca_ref_chrLG_all_to_Kmer_merges_81-scaffolds/Alignments/tcas.scaffolds/Tribolium3kb_1_prinseq_good_P7uO.sai /home/sheltonj/tca_ref_chrLG_all_to_Kmer_merges_81-scaffolds/Alignments/tcas.scaffolds/Tribolium3kb_2_prinseq_good_36G8.sai /home/sheltonj/tca_ref_chrLG_all_to_Kmer_merges_81-scaffolds/reads/Tribolium3kb_1_prinseq_good_P7uO.fastq /home/sheltonj/tca_ref_chrLG_all_to_Kmer_merges_81-scaffolds/reads/Tribolium3kb_2_prinseq_good_36G8.fastq
 # ~/samtools-0.1.19/samtools index ./Alignments2/tcas_4.0_scaffolds/tcas_4.0_scaff_3kb.bwa.sorted.bam
 
 # # #####################################################
