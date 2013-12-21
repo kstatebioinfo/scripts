@@ -68,9 +68,9 @@ fi
 ##################################################################################
 ##############             create output directory              ##################
 ##################################################################################
-if [ ! -d "${ref_dir}Alignments/${ref_base}" ]; then
+if [ ! -d "${dir_1}Alignments/${ref_base}" ]; then
   # Control will enter here if $DIRECTORY doesn't exist.
-  mkdir -p "${ref_dir}Alignments/${ref_base}"
+  mkdir -p "${dir_1}Alignments/${ref_base}"
 fi
 
 
@@ -80,12 +80,12 @@ fi
 cd ${dir_1}
 
 # ~/bwa/bwa index ${reference}
-~/bwa/bwa aln -o 0 -t 4 ${reference} ${filename_1} > "${ref_dir}Alignments/${ref_base}/${base_1}.sai" 
+~/bwa/bwa aln -o 0 -t 4 ${reference} ${filename_1} > "${dir_1}Alignments/${ref_base}/${base_1}.sai" 
 
-~/bwa/bwa aln -o 0 -t 4 ${reference} ${filename_2} > "${ref_dir}Alignments/${ref_base}/${base_2}.sai"
+~/bwa/bwa aln -o 0 -t 4 ${reference} ${filename_2} > "${dir_1}Alignments/${ref_base}/${base_2}.sai"
 
-~/bwa/bwa sampe ${reference} "${ref_dir}Alignments/${ref_base}/${base_1}.sai" "${ref_dir}Alignments/${ref_base}/${base_2}.sai" ${read_1} ${read_2} | samtools view -Shu -@ 4 - | samtools sort -@ 4 - "${ref_dir}Alignments/${ref_base}/${base_1}.bwa.sorted"
-~/samtools-0.1.19/samtools index "${ref_dir}Alignments/${ref_base}/${base_1}.bwa.sorted.bam"
+~/bwa/bwa sampe ${reference} "${dir_1}Alignments/${ref_base}/${base_1}.sai" "${dir_1}Alignments/${ref_base}/${base_2}.sai" ${read_1} ${read_2} | samtools view -Shu -@ 4 - | samtools sort -@ 4 - "${dir_1}Alignments/${ref_base}/${base_1}.bwa.sorted"
+~/samtools-0.1.19/samtools index "${dir_1}Alignments/${ref_base}/${base_1}.bwa.sorted.bam"
 
 
 
