@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-#   USAGE: sudo nohup bash run_align.sh &
+#   USAGE: sudo nohup bash run_align.sh &> nohup3.out
 #
 #
 
