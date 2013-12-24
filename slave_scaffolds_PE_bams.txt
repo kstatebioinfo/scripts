@@ -1,6 +1,6 @@
-~/ubuntu/Alignments/Kmer_merges_81-scaffolds/Tribolium20kb_1_prinseq_good_xq20.bwa.sorted.bam
+/home/sheltonj/ubuntu/Alignments/Kmer_merges_81-scaffolds/Tribolium20kb_1_prinseq_good_xq20.bwa.sorted.bam
 20865 26673
-~/ubuntu/Alignments/Kmer_merges_81-scaffolds/Tribolium3kb_1_prinseq_good_P7uO.bwa.sorted.bam
+/home/sheltonj/ubuntu/Alignments/Kmer_merges_81-scaffolds/Tribolium3kb_1_prinseq_good_P7uO.bwa.sorted.bam
 2143 3275
-~/ubuntu/Alignments/Kmer_merges_81-scaffolds/Tribolium8kb_1_prinseq_good_ffRe.bwa.sorted.bam
+/home/sheltonj/ubuntu/Alignments/Kmer_merges_81-scaffolds/Tribolium8kb_1_prinseq_good_ffRe.bwa.sorted.bam
 6419 7522
