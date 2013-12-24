@@ -1,2 +1,0 @@
-./Alignments2/tcas_4.0_scaffolds/tcas_4.0_scaff_3kb.bwa.sorted.bam
-2400 2600

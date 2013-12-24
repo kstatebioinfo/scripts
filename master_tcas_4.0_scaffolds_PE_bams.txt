@@ -1,0 +1,6 @@
+/home/sheltonj/ubuntu/Alignments/tcas.scaffolds/Tribolium20kb_1_prinseq_good_xq20.bwa.sorted.bam
+20967 26931
+/home/sheltonj/ubuntu/Alignments/tcas.scaffolds/Tribolium3kb_1_prinseq_good_P7uO.bwa.sorted.bam
+2153 3294
+/home/sheltonj/ubuntu/Alignments/tcas.scaffolds/Tribolium8kb_1_prinseq_good_ffRe.bwa.sorted.bam
+6425 7545
