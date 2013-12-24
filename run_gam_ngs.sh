@@ -9,7 +9,7 @@ GAM_CREATE=~/gam-ngs/bin/gam-create
 GAM_MERGE=~/gam-ngs/bin/gam-merge
 
 
-#  nohup bash run_gam_ngs.sh &
+#  sudo bash scripts/run_gam_ngs.sh
 #
 #
 #  Created by jennifer shelton on 11/13/13.
