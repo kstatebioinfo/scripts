@@ -44,7 +44,7 @@ while (<SUMMARY>)
 			###############################################
 			########## check for skipped contig       #####
 			###############################################
-			elsif ((($End + 1 ) != $columns[4])&& ($Reversed eq 'F')&&($columns[6] eq 'F'))
+			elsif (($PairedContig eq $columns[0])&&(($End + 1 ) != $columns[4])&& ($Reversed eq 'F')&&($columns[6] eq 'F'))
  			{
  				print OUT "Prior: $PairedContig,$Assembly,$ContigID,$Begin,$End,$Reversed\n";
  				print OUT "Next: $columns[0],$columns[2],$columns[3],$columns[4],$columns[5],$columns[6]\n";
