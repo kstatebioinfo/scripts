@@ -2,6 +2,7 @@
 ##################################################################################
 #   
 #	USAGE: perl find_super-scaffolds.pl
+#	perl find_super-scaffolds.pl test.pctgs
 #
 #  Created by jennifer shelton
 #
