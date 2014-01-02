@@ -19,8 +19,7 @@ use warnings;
 ##################################################################################
 my $pctgs = $ARGV[0];
 open (SUMMARY, '<', $pctgs) or die "can't open $pctgs!\n";
-$pctgs =~ /(.*).pctgs/;
-open (OUT, '>', "$1.txt") or die "can't open $1.txt\n";
+
 my ($PairedContig,$Size,$Assembly,$ContigID,$Begin,$End,$Reversed);
 my $line=0;
 my $firstBegin;
@@ -50,8 +49,8 @@ while (<SUMMARY>)
 			elsif (($PairedContig eq $columns[0])&&(($End + 1 ) != $columns[4])&& ($Reversed eq 'F')&&($columns[6] eq 'F'))
  			{
  			    $losenames{$columns[0]}=$columns[3];
- 				print OUT "\nBROKEN SCAFFOLD: Prior: $PairedContig,$Assembly,$ContigID,$Begin,$End,$Reversed\n";
- 				print OUT "Next: $columns[0],$columns[2],$columns[3],$columns[4],$columns[5],$columns[6]\n";
+ 				print "\nBROKEN SCAFFOLD: Prior: $PairedContig,$Assembly,$ContigID,$Begin,$End,$Reversed\n";
+ 				print "Next: $columns[0],$columns[2],$columns[3],$columns[4],$columns[5],$columns[6]\n";
  			}
  			###############################################
             ########## check for reversed sections    #####
@@ -114,9 +113,8 @@ print "\n";
 ##################################################################################
 my $fasta=$ARGV[1];
 open FASTA,'<', $fasta or die "Can't open $fasta\n!";
-$fasta =~ /(.*)(\.fa.*)/;
 
-open NEWFASTA,'>', "$1_revert.fasta" or die "Can't open $fasta\n!";
+open NEWFASTA,'>', "master.tcas4.0.slave.scaffolds_merge.gam_revert.fasta" or die "Can't open master.tcas4.0.slave.scaffolds_merge.gam_revert.fasta\n!";
 $/ = ">"; ### each input will equal an entire fasta record
 my $seq_count=0;
 while (<FASTA>)
