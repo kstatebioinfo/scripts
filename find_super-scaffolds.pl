@@ -41,7 +41,7 @@ while (<SUMMARY>)
  			if (($PairedContig eq $columns[0])&&($ContigID ne $columns[3]))
  			{
 				 $losenames{$columns[0]}=$columns[3];
-				 print "\nSUPER-SCAFFOLD: ContigID to $columns[3]\n";
+				 print "\nSUPER-SCAFFOLD: $ContigID to $columns[3]\n";
  			}
 			###############################################
 			########## check for skipped contig       #####
