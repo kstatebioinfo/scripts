@@ -12,6 +12,8 @@
 ##################################################################################
 use strict;
 use warnings;
+use Text::Wrap;
+$Text::Wrap::columns = 61; #includes terminal \n
 # use List::Util qw(max);
 # use List::Util qw(sum);
 ##################################################################################
@@ -126,12 +128,16 @@ while (<FASTA>)
         if ($keepnames{$header})
         {
             print NEWFASTA ">$keepnames{$header}\n";
-            print NEWFASTA join ("\n", @seqLines);
+            @seqLines=join ('', @seqLines);
+            print NEWFASTA wrap('','',@seqLines);
             print NEWFASTA "\n";
         }
         else
         {
-            print NEWFASTA;
+            print NEWFASTA ">$header\n";
+            @seqLines=join ('', @seqLines);
+            print NEWFASTA wrap('','',@seqLines);
+            print NEWFASTA "\n";
         }
     }
     else {$seq_count=1};
