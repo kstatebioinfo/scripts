@@ -115,8 +115,8 @@ print "\n";
 ##################################################################################
 my $fasta=$ARGV[1];
 open FASTA,'<', $fasta or die "Can't open $fasta\n!";
-
-open NEWFASTA,'>', "master.tcas4.0.slave.scaffolds_merge.gam_revert.fasta" or die "Can't open master.tcas4.0.slave.scaffolds_merge.gam_revert.fasta\n!";
+my $out=$ARGV[2];
+open NEWFASTA,'>', $out or die "Can't open $out\n!";
 $/ = ">"; ### each input will equal an entire fasta record
 my $seq_count=0;
 while (<FASTA>)
