@@ -1,7 +1,7 @@
 #!/bin/perl
 ##################################################################################
 #   
-#	USAGE: perl find_super-scaffolds.pl
+#	USAGE: perl find_super-scaffolds.pl PCTG_FILE
 #	perl find_super-scaffolds.pl test.pctgs
 #   Script lists changes gam-ngs has made to a genome assembly and reverts 
 #   scaffold headers to original headers if they have not been altered by 
